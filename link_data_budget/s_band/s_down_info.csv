@@ -1,0 +1,42 @@
+Parameter,python_variable,Units,Formula,Satlab SRS-4
+S-Band lower limit (downlink),s_band_lower_limit,GHz,,2.22
+S-Band upper limit (downlink),s_band_upper_limit,GHz,,2.29
+Selected Carrier Frequency,selected_carrier_frequency,GHz,,2.245
+Wavelength,wavelength,m,#NAME?,0.134
+Tx Power,tx_power,W,10*math.log10(tx_power),1.9953
+Peak Boresight Antenna Gain,peak_boresight_antenna_gain,dBi,,7
+Interconnect losses (negative) / gains (positive),interconnect_losses_gains,dB,,-3.7
+Calculated EIRP,calculated_eirp,W,tx_power_dBW + peak_boresight_antenna_gain - interconnect_losses_gains,4.266
+Orbit altitude,orbit_altitude,km,,600
+Elevation ground to sat,elevation_ground_to_sat,degrees,,10
+Calculated slant range,calculated_slant_range,km,,1931.64
+Free Space Path Loss term,free_space_path_loss_term,dB,-(92.45 + 20*math.log10(calculated_slant_range) + 20*math.log10(selected_carrier_frequency)),165.18
+Atmospheric attenuation,atmospheric_attenuation,dB,,1
+Rain attenuation ('fade'),rain_attenuation,dB,,0.5
+Scintillation loss,scintillation_loss,dB,,1
+Polarisation loss,polarisation_loss,dB,,0.5
+Other propagation losses,other_propagation_losses,dB,,2
+Total Propagation Loss,total_propagation_losses,dB,free_space_path_loss_term+atmospheric_attenuation+rain_attenuation+scintillation_loss+polarisation_loss+other_propagation_losses,170.2
+System Baud (Symbol) Rate (equiv. occupied channel bandwidth),,,kBd / kSps,5000
+Modulation scheme (Downlink),,,,BPSK
+Modulation bits per symbol,,,,1
+Coding Scheme,,,,RS + CC
+CRC-only throughput,,,,95.60%
+FEC: CC rate if applied,,,,1/2
+FEC: RS - Codeword bytes if applied,,,,255
+FEC: RS - Data bytes if applied,,,,223
+FEC throughput,,,,41.80%
+Channel Throughput,,,Mbps,2.09
+Isotropically received power at satellite antenna input,isotropically_received_power_at_satellite_antenna_input,dBW,total_propagation_losses+calculated_eirp,-168.9
+G/T,g_t,dB/K,,11.6
+Dish diameter,dish_diameter,m,,3.7
+Calculated HPBW,calculated_hpbw,degrees,,2.53
+Dish pointing error,dish_pointing_error,degrees,,0.1
+Gain rolloff loss at pointing error,gain_rolloff_loss_at_pointing_error,dB,,0.28
+Other overall link losses,other_overall_link_losses,dB,,1.5
+Boltzmann Constant,boltzmann_constant,W/K/Hz,,1.38E-23
+Received Carrier-to-Noise ratio (bandwidth-independent),received_carrier_to_noise_ratio,dB-Hz,,69.5
+Supported user data rate,supported_user_data_rate,Mbps,,6.3
+Data Rate in dB-Hz,data_rate_in_db_hz,dB-Hz,,2
+Received Eb/No,received_eb_no,dB,,4.5
+Link Margin,link_margin,dB,received_eb_no - codmod_inferred_required_eb_n0,1.8

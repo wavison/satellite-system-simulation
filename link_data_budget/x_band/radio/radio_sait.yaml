@@ -1,0 +1,155 @@
+version: 1
+profiles:
+  sait_xband:
+    x_band_lower_limit:
+      value: 8.025
+      units: GHz
+      description: X-Band lower limit (downlink)
+    x_band_upper_limit:
+      value: 8.4
+      units: GHz
+      description: X-Band upper limit (downlink)
+    selected_carrier_frequency:
+      value: 8.225
+      units: GHz
+      description: Selected Carrier Frequency
+    wavelength:
+      value: 0.036
+      units: m
+      description: Wavelength
+    tx_power:
+      value: 2.5
+      units: W
+      description: Tx Power
+    peak_boresight_antenna_gain:
+      value: 15.7
+      units: dBi
+      description: Peak Boresight Antenna Gain
+    interconnect_loss:
+      value: -0.5
+      units: dB
+      description: Interconnect losses (negative) / gains (positive)
+    calculated_eirp:
+      value: 104.22
+      units: W
+      description: Calculated EIRP
+    orbit_altitude:
+      value: 570.0
+      units: km
+      description: Orbit altitude
+    elevation_ground_to_sat:
+      value: 30.0
+      units: degrees
+      description: Elevation ground to sat
+    calculated_slant_range:
+      value: 1025.82
+      units: km
+      description: Calculated slant range
+    free_space_path_loss_term:
+      value: 170.97
+      units: dB
+      description: Free Space Path Loss term
+    atmospheric_attenuation:
+      value: 1.0
+      units: dB
+      description: Atmospheric attenuation
+    rain_attenuation:
+      value: 0.5
+      units: dB
+      description: Rain attenuation ('fade')
+    scintillation_loss:
+      value: 1.0
+      units: dB
+      description: Scintillation loss
+    polarisation_loss:
+      value: 0.5
+      units: dB
+      description: Polarisation loss
+    other_propagation_losses:
+      value: 1.0
+      units: dB
+      description: Other propagation losses
+    total_propagation_losses:
+      value: 175.0
+      units: dB
+      description: Total Propagation Loss
+    system_symbol_rate:
+      value: 250.0
+      units: MSps (or MHz)
+      description: System symbol rate (or bandwidth)
+    modcod_scheme:
+      value: QPSK 5/6
+      units: .nan
+      description: MODCOD scheme
+    modcod_implementation_loss:
+      value: 0.3
+      units: dB
+      description: MODCOD implementation loss
+    spectral_efficiency:
+      value: 1.7
+      units: bps/Hz
+      description: Spectral efficiency
+    other_radio_protocol_overheads:
+      value: 0.60%
+      units: (%)
+      description: Other radio/protocol overheads
+    channel_throughput:
+      value: 411.2
+      units: Mbps
+      description: Channel Throughput
+    codmod_inferred_required_eb_n0:
+      value: 3.29
+      units: dB
+      description: CODMOD-inferred required Eb/N0 (inc. implementation losses)
+    isotropically_received_power_at_satellite_antenna_input:
+      value: -157.3
+      units: dBW
+      description: Isotropically received power at satellite antenna input
+    g_t:
+      value: 24.4
+      units: dB/K
+      description: G/T
+    dish_diameter:
+      value: 3.7
+      units: m
+      description: Dish diameter
+    calculated_hpbw:
+      value: 0.69
+      units: degrees
+      description: Calculated HPBW
+    dish_pointing_error:
+      value: 0.1
+      units: degrees
+      description: Dish pointing error
+    gain_rolloff_loss_at_pointing_error:
+      value: 0.3
+      units: dB
+      description: Gain rolloff loss at pointing error
+    other_overall_link_losses:
+      value: 2.0
+      units: dB
+      description: Other overall link losses
+    boltzmann_constant:
+      value: 1.38e-23
+      units: W/K/Hz
+      description: Boltzmann Constant
+    received_carrier_to_noise_ratio:
+      value: 93.4
+      units: dB-Hz
+      description: Received Carrier-to-Noise ratio (bandwidth-independent)
+    supported_user_data_rate:
+      value: 411.18
+      units: Mbps
+      description: Supported user data rate
+    data_rate_in_db_hz:
+      value: 86.14
+      units: dB-Hz
+      description: Data Rate in dB-Hz
+    received_eb_no:
+      value: 7.27
+      units: dB
+      description: Received Eb/No
+    link_margin:
+      value: 3.98
+      units: dB
+      description: Link Margin

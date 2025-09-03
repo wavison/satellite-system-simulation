@@ -1,0 +1,25 @@
+antenna:
+  name: "Printech X-Band 4x4 Patch Antenna Array"
+  manufacturer: "Printech Circuit Laboratories"
+  type: "Patch array"
+  frequency_band: "X-band"
+  frequency_range:
+    min: 8025 MHz
+    max: 8500 MHz
+  polarization: "RHCP (Right-Hand Circular Polarization)"
+  gain:
+    peak_gain_dBic: 16.7 ± 0.6
+    linear_gain_dBi: 13.5 - 14
+  beamwidth:
+    azimuth: ~20°
+    elevation: ~20°
+  impedance: 50 ohms
+  VSWR: "< 1.5:1"
+  connector: "SMA female"
+  dimensions: 
+    size_mm: "95 x 95 x 10"
+  mass: "120 g"
+  operating_temperature: "-40°C to +85°C"
+  notes: 
+    - "High-gain circularly polarized patch array"
+    - "Available in 2x2 or 4x4 configurations"

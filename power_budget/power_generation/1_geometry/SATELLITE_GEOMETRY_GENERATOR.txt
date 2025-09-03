@@ -1,0 +1,99 @@
+SCENARIO=SATELLITE_GEOMETRY_GENERATOR
+
+# ******************************************************************************************************************************************************************
+# Satellite geometry generator
+# ******************************************************************************************************************************************************************
+#
+# To use the visualisation tool for this scenario, in git, navigate to:
+# app > msd > SatelliteGeometry
+# and clone/download this repo into the directory
+# technicalsupport
+# within which the TechnicalSupportJar lies.
+#
+# Will create a custom LUT to be used in the power budget tool
+#
+# ****BODY****
+# Central body to attach any solar panels to
+# Format: [x dimension [m],y dimension [m],z dimension [m]]
+# DIMENSIONS=0,0,0
+# Solar cell area to assign each of the facets
+# Format: [ +x area of solar cells [m^2] , +y area of solar cells [m^2] ,+z area of solar cells [m^2], 
+#			-x area of solar  cells [m^2] ,-y area of solar cells [m^2] ,-z area of solar cells  [m^2] ]
+# SOLAR_AREA_FOR_FACETS= 0,0,0,0,0,0
+#
+# ****SOLAR_PANELS****
+# Solar panels to attach to the body. 
+# Below are the possible choices and the parameters required for each.
+# NOTE: 
+# - you CANNOT combine solar panels of different types.
+# - you cannot place perpendicular type solar panels in the 
+#		y direction as this is just a translation of frames when using another 
+#		senario and would require (unnecessary) extensive work in the backend.
+# Simply copy and paste the solar panel input from below and change the name 
+# of the panel to increase by 1 for every panel added.
+#
+# Agrument 1 : TYPE > the type of solar panel. The choices are: PERP,PETAL,DIAG
+# Argument 2 : PANEL_SELECTOR > Selects which panel is being referred to.
+#					for type PETAL, this represents whether the panel is:
+#						- attached at the plus x facet > +X
+#						- attached at the plus y facet > +Y
+#						- attached at the minus x facet > -X
+#						- attached at the minus y facet > -Y
+#					for type PERP, this represents whether the panel is:
+#						- attached at the plus x facet  > +X
+#						- attached at the minus x facet > -X
+#					the choices are listed above in the list.
+# Argument 3 : QUADRANT_TO_PLACE > the quadrant of the axis to place the panel in. 
+#					the choices are: PLUS,MINUS
+#					for type PETAL, this represents whether the panel is:
+#						- at the 'top' of the body in the plus z quadrant.
+#						- at the 'bottom' of the body in the minus z quadrant.
+#					for type PERP, this represents whether the panel is 
+#						- at the 'front' of the body in the plus x quadrant 
+#						- at the 'back' of the body in the minus x quadrant.
+# Argument 4 : ANGLE_FROM_USUAL > the angle of the solar panel to protrude from the body.
+#					for type PETAL, this represents the angle from:
+#						- the minus z axis of the body if the panel is in the plus z quadrant. 
+#						- the plus z axis of the body if the panel is in the minus z quadrant. 
+#					for type PERP, this represents whether the panel is 
+#						- the plus x axis of the body if the panel is in the minus x quadrant.
+#						- the minus x axis of the body if the panel is in the plus x quadrant.
+# Argument 5 : SOLAR_AREA_INSIDE_ANGLE_PER_DEPLOYABLE > the solar panel area for the facet on the 
+							inside of the angle specified per single deployable.
+# Argument 6 : SOLAR_AREA_OUTSIDE_ANGLE_PER_DEPLOYABLE > the solar panel area for the facet on the
+							outside of the angle specified per single deployable.
+# Argument 7 : MULTIPLE_DEPLOYABLE > the number of panels you want of the specified type.
+#					the choices are: SINGLE,DOUBLE,TRIPLE
+# 
+# SOLAR_PANEL_{INSERT_NUMBER_FROM_1_TO_N}= TYPE,PANEL_SELECTOR,QUADRANT_TO_PLACE,ANGLE_FROM_USUAL,SOLAR_AREA_INSIDE_ANGLE_PER_DEPLOYABLE,SOLAR_AREA_OUTSIDE_ANGLE_PER_DEPLOYABLE,MULTIPLE_DEPLOYABLE
+#
+# ****VISUALISATION_TOOL****
+# VISUAL_AID: whether to use a visualisation tool. Choices are: True, False
+#
+# An example to make a 3U single perp:
+#
+# DIMENSIONS=0.1,0.1,0.3
+# SOLAR_AREA_FOR_FACETS= 0,0,0,0,0,0
+# NUMBER_OF_SOLAR_PANELS=2
+# SOLAR_PANEL_1= PERP,+X,PLUS,0,0,0.015,DOUBLE
+# SOLAR_PANEL_2= PERP,-X,PLUS,0,0,0.015,DOUBLE
+# VISUAL_AID=True
+# (the above has solar panels which are 50% solar cell)
+#
+# An example of making MANTIS:
+# DIMENSIONS=0.23,0.23,0.34
+# NUMBER_OF_SOLAR_PANELS=4
+# SOLAR_AREA_FOR_FACETS=0.0424,0,0.0106,0,0,0
+# SOLAR_PANEL_1= PETAL,+X,MINUS,135,0.0424,0,DOUBLE
+# SOLAR_PANEL_2= PETAL,-X,PLUS,135,0,0.0424,DOUBLE
+# SOLAR_PANEL_3= PETAL,+Y,PLUS,45,0,0.0424,SINGLE
+# SOLAR_PANEL_4= PETAL,-Y,PLUS,45,0,0.0424,SINGLE
+# VISUAL_AID=True
+#
+# Place your construction below:
+#
+# WARNING: PERP ANGLES ARE NOT YET IMPLEMENTED. CURRENTLY ONLY OPERATES AT 90 DEG
+
+
+
+

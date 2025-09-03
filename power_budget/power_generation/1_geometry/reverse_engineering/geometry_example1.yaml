@@ -1,0 +1,30 @@
+
+meta:
+  name: "EXAMPLE_GEOMETRY"
+  version: 2
+grid:
+  az_step_deg: 5 # Note: -180 to 180 for full sphere, 0 to 360 for half-sphere
+  el_step_deg: 5 #  Note: 0 to 90 for half-sphere, -90 to 90 for full sphere
+  az_start_deg: -180 # Note: -180 to 180 for full sphere, 0 to 360 for half-sphere
+  az_stop_deg: 180 # Note: -180 to 180 for full sphere, 0 to 360 for half-sphere
+  el_start_deg: -90 # Note: 0 to 90 for half-sphere, -90 to 90 for full sphere
+  el_stop_deg: 90 # Note: 0 to 90 for half-sphere, -90 to 90 for full sphere
+spacecraft:
+  body:
+    dimension: [0.2, 0.4, 0.2] # x, y, z in meters
+    facet_solar_area_m2: [0.0, 0.04, 0.0, 0.0, 0.0, 0.0] # +x face, -x face, +y face, -y face, +z face, -z face
+    alpha_abs: 0.6 # Absorptivity
+    epsilon_emi: 0.8 # Emissivity
+  deployables:
+    - name: "panel_1"
+      attach_face: "+X"
+      quadrant: PLUS
+      angle_deg: 90
+      area_inside_m2: 0.0
+      area_outside_m2: 0.04
+      multiplicity: SINGLE
+coefficients:
+  drag_coeff: 2.2
+  srp_reflectivity: 0.3
+outputs:
+  file: "geometry_output.csv"

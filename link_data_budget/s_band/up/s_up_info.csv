@@ -1,0 +1,42 @@
+Parameter,python_variable,Units,Formula,Satlab SRS-4
+S-Band lower limit (downlink),s_band_lower_limit,GHz,,2.025
+S-Band upper limit (downlink),s_band_upper_limit,GHz,,2.11
+Selected Carrier Frequency,selected_carrier_frequency,GHz,,2.0675
+Wavelength,wavelength,m,,0.145
+Given EIRP,,W,,3.02E+04
+Reflector size (=diameter),,m,,2
+Antenna HPBW,,degrees,,5.079
+Dish pointing error,,degrees,,0.1
+Gain rolloff loss,,dB,,0.28
+Equivalent EIRP,,W,,"28,314"
+Orbit altitude,orbit_altitude,km,,550
+Elevation ground to sat,elevation_ground_to_sat,degrees,,10
+Calculated slant range,calculated_slant_range,km,,1815.08
+Free Space Path Loss term,free_space_path_loss_term,dB,,163.93
+Atmospheric attenuation,atmospheric_attenuation,dB,,1
+Rain attenuation ('fade'),rain_attenuation,dB,,0.5
+Scintillation loss,scintillation_loss,dB,,1
+Polarisation loss,polarisation_loss,dB,,0.5
+Other propagation losses,other_propagation_losses,dB,,1
+Total Propagation Loss,total_propagation_losses,dB,,167.9
+System Baud (Symbol) Rate (equiv. occupied channel bandwidth),,,,5000
+Modulation scheme (Uplink),,,,QPSK
+Modulation bits per symbol,,,,2
+Coding Scheme,,,,CC
+CRC-only throughput,,,,95.60%
+FEC: CC rate if applied,,,,1/2
+FEC: RS - Codeword bytes if applied,,,,255
+FEC: RS - Data bytes if applied,,,,223
+FEC throughput,,,,47.80%
+Channel Throughput,,,,4.78
+Isotropically received power at satellite antenna input,isotropically_received_power_at_satellite_antenna_input,dBm,,-93.4
+Peak Gain,g_t,dBi,,7
+Antenna HPBW,dish_diameter,degrees,,5
+Sat pointing error,calculated_hpbw,degrees,,5
+Gain reduction at pointing error,dish_pointing_error,dB,,6
+System noise temp,gain_rolloff_loss_at_pointing_error,K,,
+Interconnect losses (negative) / gains (positive),other_overall_link_losses,dB,,-3.7
+Other overall link losses,boltzmann_constant,dB,,2
+Power received at satellite receiver,received_carrier_to_noise_ratio,dBm,,-98.1
+Receiver sensitivity (MODCOD-dependent - lookup),supported_user_data_rate,dBm,,-100.5
+Link Margin,,dB,,2.4
